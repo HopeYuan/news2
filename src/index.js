@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import HackerApp from './App';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import { Router, Link, Route, IndexRoute, browserHistory } from 'react-router';
-import CommentView from './commentPage';
+
 
 		var App = React.createClass({
 		  render : function() {
