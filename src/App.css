@@ -18,6 +18,17 @@
   font-size: large;
 }
 
+h1{
+   margin-left: 50px;
+   margin-top: 50px;
+   color:  #4682B4;
+}
+
+
+.list-group{
+  margin-left: 50px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
