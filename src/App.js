@@ -64,12 +64,16 @@ var NewsList = React.createClass({
         <ul className="list-group"  >
           {
             this.props.posts.map(post =>{
-           return <li  post={post} key={post.id}><a href={post.link}> {post.title}</a> </li>
+           return <li  post={post} key={post.id}><a href={post.link}> {post.title}</a> <a onClick={this.deleteitem.bind(this,post)
+           } className="delete" href="#">x</a></li>
           })
         }
         </ul>
   
   )
+ },
+ deleteitem(post){
+this.props.deleteHandler(post);
  }
 
 }) ;  
@@ -101,12 +105,28 @@ var HackerApp = React.createClass({
         
         return (
            <div >
-               <NewsList posts={this.state.posts}
-                    />
+               <NewsList posts={this.state.posts} deleteHandler={this.deletepost}/>
+       
                <Form addHandler={this.addPost}  />
           </div>
         );
+    },
+    deletepost:function(post){
+  var posts=this.state.posts;
+
+   for(var i=0;i<posts.length;i++){
+    if(posts[i].id==post.id){
+      posts.splice(i,1);
+
     }
+   }
+   
+   this.setState({posts:posts});
+
+    
+
+ },
+ 
 });
 
 export default HackerApp;
