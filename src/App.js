@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import './App.css';
 
+import * as firebase from 'firebase';
+
 var Form = React.createClass({
    // getInitialState: function() {
    //     return { title: '', link: ''};
@@ -97,10 +99,35 @@ var HackerApp = React.createClass({
     link:link
   }
 
-
+this.firebaseRef.push(newitem);
   this.setState({posts:this.state.posts.concat(newitem)});
     }, 
         
+
+
+    componentDidMount: function() {
+    // var that=this;
+    this.firebaseRef=new Firebase('https://news2-38e45.firebaseio.com/posts');
+   var that=this;
+
+    this.firebaseRef.once("value",function(snapshot) {
+   var posts=[];
+   snapshot.forEach(function(data){
+     console.log(data.val());
+   
+var post={
+  id:data.val().id,
+                  title:data.val().title,
+                  link:data.val().link
+
+                 }
+  
+ 
+     posts.push(post);
+     that.setState({posts:posts});
+   });
+    });
+           },
     render: function(){
         
         return (
