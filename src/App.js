@@ -31,11 +31,32 @@ this.refs.title.value='';
 
 
      },
+
+       handleDeleteAllPost: function(e) {
+    // var title=this.refs.title.value.trim();
+
+   
+    //      this.props.deleteAllHandler(title);
+      
+        var firebaseRef=new Firebase('https://news2-38e45.firebaseio.com/posts');
+ 
+    // console.log(firebaseRef);
+
+     firebaseRef.once("value",function(snapshot) {
+
+      
+    
+         firebaseRef.remove();
+    });
+     },
      render : function() {
        return (
          <div className="container">
                    <div className="row">
                       <div className="col-md-6 col-md-offset-3"> <form style={{marginTop: '30px'}}>
+           <button type="submit" className="btn btn-primary"
+                 onClick={this.handleDeleteAllPost} >DeleteAllPost</button>
+         
             <h3>Add a new post</h3>
             <div className="form-group">
               <input type="text"
