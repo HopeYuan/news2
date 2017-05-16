@@ -19,7 +19,7 @@ Name: Xuanxuan Yuan
 + react-router 2.6.1 
 
 
-Instructions:
+## Instructions:
 
 +Swap out the firebase url in app.js with your own
 +npm install
@@ -36,15 +36,14 @@ User can post news and add post to firebase and delete post from database.
 
 
 ## App Component Design.
-
-A diagram showing the app's hierarchical component design (see example below). 
+Form and ItemList are component of HarkerApp,Form allow user to add post and delete post,ItemList can show lists of post.
 ![image](https://github.com/HopeYuan/news2/blob/master/Archive/design.jpg
 )
 
 
 ## UI Design.
 
-Form and ItemList are component of HarkerApp,Form allow user to add post and delete post,ItemList can show lists of post.
+
 
 ![image](https://github.com/HopeYuan/news2/blob/master/Archive/screen.png)
 
