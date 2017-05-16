@@ -13,7 +13,6 @@ Name: Xuanxuan Yuan
  
  
 ## Installation requirements.
-. . . .  List of software used to develop the app . . . . . . . 
 + ReactJS v15.3.0
 + Bootstrap 3
 + create-react-app tool
@@ -22,39 +21,37 @@ Name: Xuanxuan Yuan
 
 Instructions:
 
-Swap out the firebase url in app.js with your own
-npm install
-npm start
-Visit localhost:3000
++Swap out the firebase url in app.js with your own
++npm install
++npm start
++Visit localhost:3000
 
 
 ## Data Model Design.
 
 
 
-![][image1]
+![image](https://github.com/HopeYuan/news2/blob/master/Archive/model.png)
 User can post news and add post to firebase and delete post from database.
 
 
 ## App Component Design.
 
 A diagram showing the app's hierarchical component design (see example below). 
+![image](https://github.com/HopeYuan/news2/blob/master/Archive/design.jpg
+)
 
-![][image2]
 
 ## UI Design.
 
 Form and ItemList are component of HarkerApp,Form allow user to add post and delete post,ItemList can show lists of post.
 
-![][image3]
-
-## Routing.
+![image](https://github.com/HopeYuan/news2/blob/master/Archive/screen.png)
 
 
 
 
 
 
-[image1]: ./model.png
-[image2]: ./design.jpg
-[image3]: ./screen.png
+
+
