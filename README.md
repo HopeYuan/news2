@@ -21,10 +21,10 @@ Name: Xuanxuan Yuan
 
 ## Instructions:
 
-+Swap out the firebase url in app.js with your own
-+npm install
-+npm start
-+Visit localhost:3000
++ Swap out the firebase url in app.js with your own
++ npm install
++ npm start
++ Visit localhost:3000
 
 
 ## Data Model Design.
